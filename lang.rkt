@@ -51,7 +51,7 @@
 
 
     ;; grammar for var-exp
-
+    (expression (identifier) var-exp)
 
     ;; grammar for let-exp
 
