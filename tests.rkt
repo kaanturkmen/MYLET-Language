@@ -105,7 +105,11 @@
  ;(nested-cond3 "let z = #true in let x = #false in my-cond zero?(2) then my-cond comp(3,'less',4) then 5, else op(4,'mult',2), #false then op(5,'mult',op(4,'sub',1)), else let y = 3 in op(y,'div',2)" 3/2)
 
  
- 
+ ;; find-hypotenuse cases
+ (find-hypotenuse "find-hypotenuse(3, 4)" 5)
+ (find-hypotenuse1 "find-hypotenuse(5, 12)" 13)
+ (find-hypotenuse2 "find-hypotenuse(10, 18)" 20.591260281974)
+ (find-hypotenuse3 "find-hypotenuse(let x = 4 in let y = 3 in op(x, 'add', y), 15)" 16.55294535724685)
 
 
 

@@ -60,6 +60,10 @@
      ("let" identifier "=" expression "in" expression)
      let-exp)
 
+    ;; grammar for find-hypotenuse
+    (expression
+     ("find-hypotenuse(" expression "," expression ")") hypotenuse-exp)
+
 ))
 
 
