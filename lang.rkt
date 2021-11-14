@@ -54,6 +54,9 @@
     (expression (identifier) var-exp)
 
     ;; grammar for let-exp
+    (expression
+     ("let" identifier "=" expression "in" expression)
+     let-exp)
 
 ))
 
