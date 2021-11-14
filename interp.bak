@@ -52,7 +52,7 @@
 
       
       ;; implement str-exp here
-      (str-exp (exp1) (str-val exp1))
+
 
       ;; implement bool-exp here
 

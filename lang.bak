@@ -25,7 +25,7 @@
     (expression (number) const-exp)
     
     ;; grammar for strings
-    (expression ("'" identifier "'") str-exp)
+
 
     ;; grammar for bool
 
