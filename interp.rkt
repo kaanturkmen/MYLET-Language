@@ -56,6 +56,11 @@
 
 
       ;; implement bool-exp here
+      (bool-exp (str)
+                (cond
+                  [(equal? "#true" str) (bool-val #t)]
+                  [(equal? "#false" str) (bool-val #f)]
+                  [else 'error]))
 
       
       ;; implement zero-exp here

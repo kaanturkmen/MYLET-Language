@@ -28,6 +28,7 @@
     (expression (string) str-exp)
 
     ;; grammar for bool
+    (expression (boolean) bool-exp)
 
 
     ;; grammar for comp-exp
