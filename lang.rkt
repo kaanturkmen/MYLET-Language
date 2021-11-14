@@ -32,7 +32,7 @@
 
 
     ;; grammar for comp-exp
-
+    (expression ("comp" "(" expression "," expression "," expression ")") comp-exp)
 
     ;; grammar for op-exp
     (expression ("op(" expression "," string "," expression ")") op-exp)

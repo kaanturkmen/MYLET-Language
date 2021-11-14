@@ -33,7 +33,17 @@
 
       ;; implement comp-exp here
 
-
+      (comp-exp (exp1 cond1 exp2)
+              (let ((val1 (value-of exp1 env))
+                    (val2 (value-of cond1 env))
+                    (val3 (value-of exp2 env)))
+                (let ((num1 (expval->num val1))
+                      (eval1 (expval->string val2))
+                      (num2 (expval->num val3)))
+                  (cond ((equal? eval1 "'greater'") (bool-val (> num1 num2)))
+                        ((equal? eval1 "'less'") (bool-val(< num1 num2)))
+                        ((equal? eval1 "'equal'") (bool-val(= num1 num2))))
+                        )))
       
       ;; implement op-exp here
       (op-exp (exp1 str exp2)
@@ -56,7 +66,7 @@
                     (value-of else-exp env))))
 
       ;; implement my-cond-exp here
-
+     
 
       
       ;; implement str-exp here
