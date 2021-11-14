@@ -64,10 +64,10 @@
  (bool-test "#f" error)
 
  ;; op tests
- ;(op-test "op(5,'add',6)" 11)
- ;(op-test2 "op(5,'sub',6)" -1)
- ;(op-test3 "op(5,'mult',6)" 30)
- ;(op-test4 "op(5,'div',6)" 5/6)
+ (op-test "op(5,'add',6)" 11)
+ (op-test2 "op(5,'sub',6)" -1)
+ (op-test3 "op(5,'mult',6)" 30)
+ (op-test4 "op(5,'div',6)" 5/6)
  ;(nested-op-test "op(op(6,'add',2),'div',4)" 2)
  ;(nested-op-test "op(op(6,'add',2),'sub',op(-2,'mult',4))" 16)
 

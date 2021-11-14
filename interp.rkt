@@ -36,9 +36,17 @@
 
       
       ;; implement op-exp here
-
-      
-
+      (op-exp (exp1 str exp2)
+                (let ((val1 (value-of exp1 env))
+                      (val2 (value-of exp2 env)))
+                  (let ((num1 (expval->num val1))
+                        (num2 (expval->num val2)))
+                  (cond
+                    [(equal? "'add'" str) (num-val (+ num1 num2))]
+                    [(equal? "'mult'" str) (num-val (* num1 num2))]
+                    [(equal? "'div'" str) (num-val (/ num1 num2))]
+                    [(equal? "'sub'" str) (num-val (- num1 num2))]
+                    [else 'error]))))
       
       ;; if-exp
       (if-exp (cond1 exp1 else-exp)
