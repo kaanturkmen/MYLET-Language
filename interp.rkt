@@ -66,6 +66,10 @@
                          (bool-val #f)))))
 
       ;; implement let-exp here
+      (let-exp (var exp1 body)       
+               (let ((val1 (value-of exp1 env)))
+                 (value-of body
+                           (extend-env var val1 env))))
 
 )))
 
