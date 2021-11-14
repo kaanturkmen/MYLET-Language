@@ -29,7 +29,7 @@
       (const-exp (num) (num-val num))
 
       ;; implement var-exp here
-      
+      (var-exp (var) (apply-env env var))
 
       ;; implement comp-exp here
 
