@@ -26,7 +26,7 @@
     (cases expression exp
 
       ;; implement const-exp here
-     
+      (const-exp (num) (num-val num))
 
       ;; implement var-exp here
       
