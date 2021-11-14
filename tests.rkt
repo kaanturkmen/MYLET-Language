@@ -72,9 +72,9 @@
  ;(nested-op-test "op(op(6,'add',2),'sub',op(-2,'mult',4))" 16)
 
  ;; comp tests
- ;(comp-test "comp(5,'greater',6)" #f)
- ;(comp-test2 "comp(3,'equal',3)" #t)
- ;(comp-test3 "comp(5,'less',6)" #t)
+ (comp-test "comp(5,'greater',6)" #f)
+ (comp-test2 "comp(3,'equal',3)" #t)
+ (comp-test3 "comp(5,'less',6)" #t)
 
   ;; basic if tests
  ;(if-basic "if zero?(0) then 2 else 1" 2)
