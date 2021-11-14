@@ -37,7 +37,7 @@
       
       ;; implement op-exp here
 
-
+      
 
       
       ;; if-exp
@@ -58,11 +58,16 @@
 
       
       ;; implement zero-exp here
-
+      (zero?-exp (exp1)
+                 (let ((val1 (value-of exp1 env)))
+                   (let ((num1 (expval->num val1)))
+                     (if (zero? num1)
+                         (bool-val #t)
+                         (bool-val #f)))))
 
       ;; implement let-exp here
 
-
+)))
 
 
 ;(trace value-of)
