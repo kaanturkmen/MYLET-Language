@@ -18,7 +18,7 @@
 ;)
 
 ;(define-dataype bool-val bool-val?
- ; (bool-val boolean?))
+  ;(bool-val boolean?))
 ;;; extractors:
 
 ;; expval->num : ExpVal -> Int

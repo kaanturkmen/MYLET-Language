@@ -37,7 +37,9 @@
 
 
     ;; grammar for zero?-exp
-
+    (expression
+     ("zero?" "(" expression ")")
+     zero?-exp)
 
     ;; grammar for if-exp
     (expression
