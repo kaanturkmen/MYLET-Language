@@ -35,6 +35,7 @@
 
 
     ;; grammar for op-exp
+    (expression ("op(" expression "," string "," expression ")") op-exp)
 
 
     ;; grammar for zero?-exp
