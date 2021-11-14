@@ -21,9 +21,9 @@
 (define init-env 
   (lambda ()
     (extend-env 
-     'z (num-val 24)
+     'z (num-val 6)
      (extend-env
-      'y (num-val 12)
+      'y (num-val 3)
       (extend-env
        'x (num-val 4)
        (empty-env))))))
