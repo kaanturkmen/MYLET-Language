@@ -18,6 +18,16 @@
 
 ;;; initialize environment with x, y, z
 
+(define init-env 
+  (lambda ()
+    (extend-env 
+     'z (num-val 24)
+     (extend-env
+      'y (num-val 12)
+      (extend-env
+       'x (num-val 4)
+       (empty-env))))))
+
 
 ;;;;;;;;;;;;;;;; environment constructors and observers ;;;;;;;;;;;;;;;;
 
