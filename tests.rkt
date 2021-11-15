@@ -107,9 +107,11 @@
  
  ;; find-hypotenuse cases
  (find-hypotenuse "find-hypotenuse(3, 4)" 5)
- (find-hypotenuse1 "find-hypotenuse(5, 12)" 13)
+ (find-hypotenuse1 "find-hypotenuse(10, 24)" 26)
  (find-hypotenuse2 "find-hypotenuse(10, 18)" 20.591260281974)
  (find-hypotenuse3 "find-hypotenuse(let x = 4 in let y = 3 in op(x, 'add', y), 15)" 16.55294535724685)
+ (find-hypotenuse4 "find-hypotenuse(let x = 4 in let y = op(x, 'sub', 1) in let z = op(op(6, 'add', 2), 'sub', op(-2, 'mult', 4)) in op(z, 'sub', op(y, 'add', 1)), op(let k = 3 in k, 'add', op(op(6, 'add', 2), 'div', 4)))" 13)
+
 
 
 
