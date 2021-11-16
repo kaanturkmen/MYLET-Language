@@ -50,7 +50,7 @@
 
     
     ;; grammar for my-cond-exp
-
+    (expression ("my-cond" expression "then" expression "," (arbno expression "then" expression ",")  "else" expression) my-cond-exp)
 
     ;; grammar for var-exp
     (expression (identifier) var-exp)

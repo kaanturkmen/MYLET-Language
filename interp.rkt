@@ -66,8 +66,15 @@
                     (value-of else-exp env))))
 
       ;; implement my-cond-exp here
-     
-
+     (my-cond-exp (cond1 exp1 conds exps else-exp)
+                  (let ((val1 (value-of cond1 env))
+                        (val2 (my-cond-helper (value-of-my-cond conds exps env))))
+                    (if (null? val2)
+                        (if (expval->bool val1)
+                            (value-of exp1 env)
+                            (value-of else-exp env))
+                          val2)))
+                              
       
       ;; implement str-exp here
       (str-exp (exp1) (str-val exp1))
@@ -105,5 +112,20 @@
 
 )))
 
+(define value-of-my-cond
+  (lambda (conds exps env)
+    (cond ((null? conds)
+           (cons 'stop '()))
+          ((expval->bool (value-of (car conds) env))
+           (cons  (value-of (car exps) env) (value-of-my-cond (cdr conds) (cdr exps) env)))
+          (else
+           (value-of-my-cond (cdr conds) (cdr exps) env)))))
+
+(define my-cond-helper
+  (lambda (lst)
+    (cond ((or (equal? (car lst) 'stop)) (null? lst)'())
+          ((equal? (cadr lst) 'stop) (car lst))
+          (else
+           (my-cond-helper(cdr lst))))))
 
 ;(trace value-of)
