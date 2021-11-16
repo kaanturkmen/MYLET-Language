@@ -111,7 +111,11 @@
  (find-hypotenuse2 "find-hypotenuse(10, 18)" 20.591260281974)
  (find-hypotenuse3 "find-hypotenuse(let x = 4 in let y = 3 in op(x, 'add', y), 15)" 16.55294535724685)
  (find-hypotenuse4 "find-hypotenuse(let x = 4 in let y = op(x, 'sub', 1) in let z = op(op(6, 'add', 2), 'sub', op(-2, 'mult', 4)) in op(z, 'sub', op(y, 'add', 1)), op(let k = 3 in k, 'add', op(op(6, 'add', 2), 'div', 4)))" 13)
-
+ (find-hypotenuse5 "find-hypotenuse(8, 15)" 17)
+ (find-hypotenuse6 "find-hypotenuse(let x = 5 in let y = 12 in op(y, 'sub', x), let z = 8 in op(z, 'mult', 3))" 25)
+ (find-hypotenuse7 "find-hypotenuse(my-cond comp(10,'greater',5) then 5, comp(4,'equal',3) then op(6,'mult',3), else 8 , 12)" 13)
+ (find-hypotenuse8 "find-hypotenuse(my-cond comp(10,'greater',5) then 5, comp(4,'equal',3) then op(6,'mult',3), else 8 , if comp(23,'greater',7) then op(6,'mult',2) else if zero?(op(6,'sub',3)) then op(5,'sub',2) else 5)" 13)
+ (find-hypotenuse9 "find-hypotenuse(let x = 6 in let y = op(3,'sub',1) in let z = comp(9,'greater', 2) in my-cond z then x, comp(x,'equal',6) then 7, comp(y,'equal',x) then z, else if comp(x, 'greater', let y = 8 in op(y,'mult',2)) then x else y, if comp(2334234,'greater',7) then op(6,'mult',4) else if zero?(op(698,'sub',3)) then op(5,'sub',2) else 5)" 25)
 
 
 
